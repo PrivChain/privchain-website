@@ -21,3 +21,5 @@ Open `index.html` in a browser.
 ## Deployment
 
 GitHub Actions deploys this repo to Pages on push to `main`.
+
+Note: this repo must remain public for Pages support on the current GitHub plan.

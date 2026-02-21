@@ -7,6 +7,7 @@ This runbook keeps the existing style while moving hosting ownership to `PrivCha
 - Domain: `privchain.io`
 - Source repo: `PrivChain/privchain-website`
 - Deployment: GitHub Pages (`.github/workflows/pages.yml`)
+- Repository visibility: `public` (required for GitHub Pages on current plan)
 
 ## Cutover Steps
 
@@ -17,6 +18,7 @@ This runbook keeps the existing style while moving hosting ownership to `PrivCha
 2. Add custom domain in new repo
 - Settings -> Pages -> Custom domain -> `privchain.io`.
 - Keep `Enforce HTTPS` off until certificate is issued, then enable.
+- If you receive \"custom domain already taken\", remove the domain from the old Pages site first, then retry.
 
 3. Update DNS records at your DNS provider
 - If apex uses A records for GitHub Pages, set to:
