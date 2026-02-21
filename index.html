@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PrivChain is a privacy layer for x402-compatible machine payments. Privacy-preserving verification, settlement lifecycle visibility, and secure signer workflows.">
+    <meta name="keywords" content="PrivChain, x402, privacy, agent payments, zk, MCP">
+    <meta property="og:title" content="PrivChain | Private Payments for Agents">
+    <meta property="og:description" content="x402-compatible privacy infrastructure for agent-to-agent and agent-to-service payments.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>PrivChain | Private Payments for Agents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">PRIVCHAIN</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#api">API</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#developers">Developers</a></li>
+            </ul>
+            <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary nav-cta">GitHub Org</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Pre-release Public Brief
+            </div>
+            <h1 class="hero-title">
+                PrivChain<br>
+                <span class="gradient-text">Private Payments for Agents</span>
+            </h1>
+            <p class="hero-subtitle">
+                PrivChain is a privacy layer for x402-compatible machine payments. We focus on privacy-preserving verification, settlement lifecycle visibility, and secure signer workflows.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">x402</span>
+                    <span class="stat-label">Compatible</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">PRIV</span>
+                    <span class="stat-label">Token Symbol</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">MCP</span>
+                    <span class="stat-label">Agent Tools</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">KMS/HSM</span>
+                    <span class="stat-label">Signer Path</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="api.html" class="btn btn-primary btn-lg">View Public API Surface</a>
+                <a href="#architecture" class="btn btn-secondary btn-lg">Explore Architecture</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <section id="mission" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mission</span>
+                <h2 class="section-title">Privacy Is the Product Layer</h2>
+                <p class="section-subtitle">PrivChain integrates with x402 payment semantics and focuses engineering effort on privacy infrastructure.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    <h3 class="feature-title">x402-Compatible</h3>
+                    <p class="feature-description">PrivChain aligns with x402 payment flow patterns instead of introducing a competing payment transport.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16"/><path d="M12 4v16"/></svg></div>
+                    <h3 class="feature-title">Privacy Layer</h3>
+                    <p class="feature-description">Verification semantics and settlement orchestration are designed for private agent transaction workflows.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div>
+                    <h3 class="feature-title">MCP-Native</h3>
+                    <p class="feature-description">Model Context Protocol tooling enables AI agents to execute payment, settlement lookup, and reconciliation actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Architecture</span>
+                <h2 class="section-title">Public System View</h2>
+                <p class="section-subtitle">Component names and interfaces are public; implementation internals remain private pre-release.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Client and Signer</h3>
+                        <p class="step-description">SDK or MCP client prepares a payment intent and obtains signed material via the signer service.</p>
+                        <code class="step-code">POST /sign-intent</code>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Facilitator Verification</h3>
+                        <p class="step-description">Facilitator validates payload shape, replay/idempotency controls, and proof envelope semantics.</p>
+                        <code class="step-code">POST /verify</code>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Settlement and Lifecycle</h3>
+                        <p class="step-description">Settlement is submitted through chain adapters and tracked with lookup + reconciliation interfaces.</p>
+                        <code class="step-code">POST /settle • GET /settlements/:ref • POST /reconcile</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="api" class="tokenomics">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Public Interface Surface</span>
+                <h2 class="section-title">Endpoints and Tools</h2>
+                <p class="section-subtitle">Tier A-safe interface list. No production hostnames or credentials are published here.</p>
+            </div>
+            <div class="tokenomics-content">
+                <div class="tokenomics-details" style="width: 100%;">
+                    <div class="utility-list">
+                        <h4>Facilitator Endpoints</h4>
+                        <ul>
+                            <li><strong>POST /verify</strong> - validate payment payload and privacy envelope</li>
+                            <li><strong>POST /settle</strong> - submit settlement request through configured adapter</li>
+                            <li><strong>GET /settlements/:settlementRef</strong> - fetch settlement lifecycle state</li>
+                            <li><strong>POST /reconcile</strong> - refresh pending settlement statuses in bulk</li>
+                            <li><strong>GET /health</strong> - service readiness and status</li>
+                        </ul>
+                    </div>
+                    <div class="utility-list" style="margin-top: 24px;">
+                        <h4>Scheme, Signer, MCP</h4>
+                        <ul>
+                            <li><strong>Payment Scheme:</strong> <code>priv-stark/v1</code></li>
+                            <li><strong>Signer Endpoint:</strong> <code>POST /sign-intent</code></li>
+                            <li><strong>MCP Tools:</strong> <code>privchain_pay</code>, <code>privchain_get_settlement</code>, <code>privchain_reconcile</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Security Posture</span>
+                <h2 class="section-title">Public Security Summary</h2>
+                <p class="section-subtitle">High-level controls only. Detailed threat model and infrastructure topology remain private pre-release.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item active">
+                    <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Request Controls</h3>
+                        <ul class="timeline-list">
+                            <li>Replay protection for payment payloads</li>
+                            <li>Idempotency enforcement for verify and settle paths</li>
+                            <li>Optional bearer auth for protected deployments</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item current">
+                    <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Operational Controls</h3>
+                        <ul class="timeline-list">
+                            <li>Structured error handling for deterministic clients</li>
+                            <li>Settlement lifecycle status and reconciliation path</li>
+                            <li>Alerting hooks for stale or failed refresh conditions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"><div class="marker-dot"></div></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Key Management Direction</h3>
+                        <ul class="timeline-list">
+                            <li>External signer isolation (non-custodial path)</li>
+                            <li>AWS KMS backend support</li>
+                            <li>HSM-compatible custody path via KMS custom key stores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="developers" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Developer Availability Intent</h2>
+                <p class="cta-subtitle">SDK and MCP surfaces are being prepared for staged public release once compatibility, security, and disclosure gates are approved.</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary btn-lg">PrivChain Organization</a>
+                    <a href="mission.html" class="btn btn-secondary btn-lg">Read Tier A Docs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">◈</span>
+                        <span class="logo-text">PRIVCHAIN</span>
+                    </a>
+                    <p class="footer-tagline">Private Payments for the Agent Economy</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Public Docs</h4>
+                        <ul>
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="architecture.html">Architecture</a></li>
+                            <li><a href="api.html">API Surface</a></li>
+                            <li><a href="security.html">Security Summary</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Developer Intent</h4>
+                        <ul>
+                            <li><a href="developers.html">Availability</a></li>
+                            <li><a href="https://github.com/PrivChain" target="_blank" rel="noopener">GitHub Org</a></li>
+                            <li><a href="https://privchain.io" target="_blank" rel="noopener">PrivChain.io</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PrivChain.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.mobile-menu-btn').classList.remove('active');
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .step, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
