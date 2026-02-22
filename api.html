@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PrivChain public API surface for verify, settle, settlement lookup, reconcile, health, and signer interfaces.">
+  <meta name="description" content="PrivChain public API surface with interface names only for facilitator, protocol, SDK, wallet, and MCP tools.">
+  <meta name="keywords" content="PrivChain API, x402, priv-stark, MCP, wallet signing, private payments">
   <meta property="og:title" content="PrivChain API Surface">
-  <meta property="og:description" content="Interface-level API definitions for private payment lifecycle operations.">
+  <meta property="og:description" content="Public interface names for integration planning, with implementation internals intentionally withheld pre-release.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://privchain.io/api.html">
   <meta property="og:image" content="https://privchain.io/assets/brand/social-card-api-1200x630.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PrivChain API Surface">
-  <meta name="twitter:description" content="Public endpoint names and tool interfaces for PrivChain integrations.">
+  <meta name="twitter:description" content="Interface names only across facilitator, SDK, MCP, wallet, and observability surfaces.">
   <meta name="twitter:image" content="https://privchain.io/assets/brand/social-card-api-1200x630.png">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="canonical" href="https://privchain.io/api.html">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#00ff88">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico">
   <title>PrivChain API Surface</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +29,139 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<section class="tokenomics" style="padding-top:160px;min-height:100vh;"><div class="container"><div class="section-header"><span class="section-tag">Tier A Public Document</span><h1 class="section-title">Public API Surface</h1><p class="section-subtitle">Interface names only.</p></div>
-<div class="feature-card"><ul class="feature-list">
-<li><strong>Facilitator:</strong> POST /verify, POST /settle, GET /settlements/:settlementRef, POST /reconcile, GET /health</li>
-<li><strong>Scheme:</strong> priv-stark/v1</li>
-<li><strong>Signer:</strong> POST /sign-intent</li>
-<li><strong>MCP Tools:</strong> privchain_pay, privchain_get_settlement, privchain_reconcile</li>
-</ul></div>
-<p style="margin-top:24px;"><a class="btn btn-secondary" href="index.html">Back to Homepage</a></p></div></section>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="PrivChain Home">
+        <img class="logo-image" src="assets/brand/logo-mark.svg" alt="PrivChain logo">
+        <span class="logo-text">PRIVCHAIN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#stage">Stage</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="api.html">API</a></li>
+      </ul>
+      <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary nav-cta">GitHub</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="resource-hub" style="padding-top: 160px; min-height: 100vh;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tier A Public Document</span>
+        <h1 class="section-title">Public API Surface</h1>
+        <p class="section-subtitle">Interface names only. Detailed payload schemas and defense internals remain restricted pre-release.</p>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none; margin-bottom: 24px;">
+        <h3 class="feature-title">x402 Compatibility Commitments</h3>
+        <ul class="feature-list">
+          <li><strong>Facilitator Endpoints:</strong> <code>POST /verify</code>, <code>POST /settle</code>, <code>GET /health</code></li>
+          <li><strong>Settlement Lifecycle:</strong> <code>GET /settlements/:settlementRef</code>, <code>POST /reconcile</code></li>
+          <li><strong>Payment Scheme:</strong> <code>priv-stark/v1</code></li>
+        </ul>
+      </div>
+
+      <div class="features-grid" style="margin-bottom: 24px;">
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Protocol Service Interfaces</h3>
+          <ul class="feature-list">
+            <li><code>PrivChainProtocol</code></li>
+            <li><code>PrivacyPoolService</code></li>
+            <li><code>CommitmentService</code></li>
+            <li><code>NullifierService</code></li>
+            <li><code>ProofVerificationService</code></li>
+            <li><code>SettlementService</code></li>
+            <li><code>CompliancePolicyService</code></li>
+          </ul>
+        </div>
+
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Node and Query Interface Groups</h3>
+          <ul class="feature-list">
+            <li><code>NetworkQueryAPI</code></li>
+            <li><code>PoolQueryAPI</code></li>
+            <li><code>ProofQueryAPI</code></li>
+            <li><code>TransactionSubmissionAPI</code></li>
+            <li><code>SettlementQueryAPI</code></li>
+          </ul>
+        </div>
+
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">SDK and Wallet Surfaces</h3>
+          <ul class="feature-list">
+            <li><code>PrivClient</code></li>
+            <li><code>PrivFacilitatorClient</code></li>
+            <li><code>PrivWalletClient</code></li>
+            <li><code>PrivPaymentSession</code></li>
+            <li><code>PrivWallet</code></li>
+            <li><code>SignerSession</code></li>
+            <li><code>TransactionSigner</code></li>
+          </ul>
+        </div>
+
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">MCP and Operations Surfaces</h3>
+          <ul class="feature-list">
+            <li><code>privchain_pay</code></li>
+            <li><code>privchain_quote</code></li>
+            <li><code>privchain_balance</code></li>
+            <li><code>privchain_receipt</code></li>
+            <li><code>privchain_health</code></li>
+            <li><code>HealthAPI</code> and <code>ReadinessAPI</code></li>
+            <li><code>MetricsAPI</code> and <code>AuditEventAPI</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resource-grid" style="margin-bottom: 24px;">
+        <article class="resource-card" style="opacity: 1; transform: none;">
+          <h3>Stability Bands</h3>
+          <p><strong>Stable:</strong> interface names listed here.<br><strong>Evolving:</strong> method signatures and payload formats.<br><strong>Restricted:</strong> proof internals, anti-abuse controls, and production thresholds.</p>
+        </article>
+        <article class="resource-card" style="opacity: 1; transform: none;">
+          <h3>Release Notes Policy</h3>
+          <p>Detailed schema packs and implementation guides are published in staged drops aligned with security and partner-readiness gates.</p>
+        </article>
+      </div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="developers.html">Developer Status</a>
+        <a class="btn btn-secondary" href="resources.html">Resources</a>
+        <a class="btn btn-secondary" href="index.html">Back to Homepage</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2026 PrivChain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
