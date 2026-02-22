@@ -33,8 +33,9 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#surface">Launch Surface</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#community">Community</a></li>
                 <li><a href="#roadmap">Execution</a></li>
                 <li><a href="api.html">API</a></li>
             </ul>
@@ -177,50 +178,50 @@
         </div>
     </section>
 
-    <section id="how-it-works" class="how-it-works">
+    <section id="get-started" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Flow</span>
-                <h2 class="section-title">How PrivChain Operates</h2>
-                <p class="section-subtitle">A focused three-step flow from intent signing to settlement lifecycle control.</p>
+                <span class="section-tag">Get Started</span>
+                <h2 class="section-title">Start Using PRIV in 3 Steps</h2>
+                <p class="section-subtitle">A proven onboarding flow adapted for PrivChain infrastructure.</p>
             </div>
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3 class="step-title">Sign Payment Intent</h3>
-                        <p class="step-description">Client uses SDK or MCP path to request signing material from the signer service with nonce and expiry safety.</p>
-                        <code class="step-code">POST /sign-intent</code>
+                        <h3 class="step-title">Choose a Wallet Path</h3>
+                        <p class="step-description">Set up your wallet and signing model. For agents, use the remote signer path instead of raw keys in shared runtimes.</p>
+                        <code class="step-code">Wallet setup -> signer integration</code>
                     </div>
                 </div>
                 <div class="step-connector"></div>
                 <div class="step">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3 class="step-title">Verify and Settle</h3>
-                        <p class="step-description">Facilitator validates proof envelope and submits settlement through the configured chain adapter under replay-safe semantics.</p>
-                        <code class="step-code">POST /verify → POST /settle</code>
+                        <h3 class="step-title">Get PRIV</h3>
+                        <p class="step-description">Fund your workflow and route payment intents through x402-compatible verify and settle endpoints.</p>
+                        <code class="step-code">POST /verify -> POST /settle</code>
                     </div>
                 </div>
                 <div class="step-connector"></div>
                 <div class="step">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                        <h3 class="step-title">Track and Reconcile</h3>
-                        <p class="step-description">Clients retrieve settlement lifecycle status and run reconciliation for pending states with alert hooks.</p>
-                        <code class="step-code">GET /settlements/:ref → POST /reconcile</code>
+                        <h3 class="step-title">Use It in Real Flows</h3>
+                        <p class="step-description">Run private agent payments, monitor settlement status, and reconcile long-pending states.</p>
+                        <code class="step-code">GET /settlements/:ref -> POST /reconcile</code>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="surface" class="tokenomics">
+    <section id="resources" class="tokenomics">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Current Delivery Surface</span>
-                <h2 class="section-title">Launch Components</h2>
-                <p class="section-subtitle">PrivChain is shipping a complete integration surface across protocol, SDK, MCP, signer, and docs.</p>
+                <span class="section-tag">Guides and Resources</span>
+                <h2 class="section-title">Learn, Build, and Operate</h2>
+                <p class="section-subtitle">A structured resource model: guides, glossary, and practical operational references.</p>
             </div>
             <div class="tokenomics-content">
                 <div class="tokenomics-chart">
@@ -228,57 +229,171 @@
                         <div class="chart-ring">
                             <svg viewBox="0 0 200 200">
                                 <circle cx="100" cy="100" r="80" fill="none" stroke="#1a1a1a" stroke-width="20"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00ff88" stroke-width="20" stroke-dasharray="90 503" stroke-dashoffset="0" class="chart-segment seg-1"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00cc6a" stroke-width="20" stroke-dasharray="84 503" stroke-dashoffset="-90" class="chart-segment seg-2"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00aa55" stroke-width="20" stroke-dasharray="84 503" stroke-dashoffset="-174" class="chart-segment seg-3"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#008844" stroke-width="20" stroke-dasharray="82 503" stroke-dashoffset="-258" class="chart-segment seg-4"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#006633" stroke-width="20" stroke-dasharray="82 503" stroke-dashoffset="-340" class="chart-segment seg-5"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#004422" stroke-width="20" stroke-dasharray="81 503" stroke-dashoffset="-422" class="chart-segment seg-6"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00ff88" stroke-width="20" stroke-dasharray="126 503" stroke-dashoffset="0" class="chart-segment seg-1"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00cc6a" stroke-width="20" stroke-dasharray="126 503" stroke-dashoffset="-126" class="chart-segment seg-2"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00aa55" stroke-width="20" stroke-dasharray="126 503" stroke-dashoffset="-252" class="chart-segment seg-3"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#008844" stroke-width="20" stroke-dasharray="125 503" stroke-dashoffset="-378" class="chart-segment seg-4"/>
                             </svg>
                             <div class="chart-center">
-                                <span class="chart-total">6</span>
-                                <span class="chart-label">Tracks</span>
+                                <span class="chart-total">4</span>
+                                <span class="chart-label">Lanes</span>
                             </div>
                         </div>
                     </div>
                     <div class="chart-legend">
-                        <div class="legend-item"><span class="legend-color" style="background: #00ff88"></span>Protocol Facilitator</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #00cc6a"></span>TypeScript SDK</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #00aa55"></span>Python SDK</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #008844"></span>MCP Server</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #006633"></span>Wallet Signer Service</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #004422"></span>Examples and Docs</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #00ff88"></span>User Guides</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #00cc6a"></span>Developer Guides</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #00aa55"></span>Privpedia</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #008844"></span>FAQ</div>
                     </div>
                 </div>
                 <div class="tokenomics-details">
-                    <div class="token-info">
-                        <div class="token-stat">
-                            <span class="token-stat-label">Token Symbol</span>
-                            <span class="token-stat-value">PRIV</span>
-                        </div>
-                        <div class="token-stat">
-                            <span class="token-stat-label">Chain Presence</span>
-                            <span class="token-stat-value">Solana</span>
-                        </div>
-                        <div class="token-stat">
-                            <span class="token-stat-label">Primary Mode</span>
-                            <span class="token-stat-value">x402-Compatible</span>
-                        </div>
-                        <div class="token-stat">
-                            <span class="token-stat-label">Privacy Scheme</span>
-                            <span class="token-stat-value">priv-stark/v1</span>
-                        </div>
-                    </div>
                     <div class="utility-list">
-                        <h4>Public Interface Surface</h4>
+                        <h4>User and Developer Guides</h4>
                         <ul>
-                            <li><strong>Facilitator</strong> — verify, settle, reconcile, health, settlement lookup</li>
-                            <li><strong>Signer</strong> — authenticated payment intent signing</li>
-                            <li><strong>SDKs</strong> — TypeScript + Python client paths</li>
-                            <li><strong>MCP</strong> — agent payment and lifecycle tooling</li>
-                            <li><strong>Evidence</strong> — CI, audit, and partner packet exports</li>
+                            <li><strong>User Path</strong> - wallet setup, first private payment, lifecycle checks</li>
+                            <li><strong>Developer Path</strong> - TypeScript/Python SDK and MCP integrations</li>
+                            <li><strong>Operational Path</strong> - signer runbooks, audit workflows, release gates</li>
                         </ul>
                     </div>
+                    <div class="utility-list" style="margin-top: 18px;">
+                        <h4>Reference Surfaces</h4>
+                        <ul>
+                            <li><strong>API</strong> - <a href="api.html">verify, settle, reconcile, health</a></li>
+                            <li><strong>Mission</strong> - <a href="mission.html">x402 positioning and product focus</a></li>
+                            <li><strong>Developer Intent</strong> - <a href="developers.html">release and integration direction</a></li>
+                        </ul>
+                    </div>
+                    <div class="utility-list" style="margin-top: 18px;">
+                        <h4>Glossary and FAQ</h4>
+                        <ul>
+                            <li><strong>Privpedia</strong> - quick definitions for protocol and operations terms</li>
+                            <li><strong>FAQ</strong> - direct answers for adoption and deployment questions</li>
+                            <li><strong>Evidence</strong> - CI, security audit, and partner packet outputs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Common Questions</h2>
+                <p class="section-subtitle">Fast answers to recurring questions from developers, operators, and partners.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">Is PrivChain replacing x402?</h3>
+                    <p class="feature-description">No. PrivChain integrates with x402-compatible payment semantics and specializes in privacy infrastructure.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">Do I need a wallet UI app?</h3>
+                    <p class="feature-description">Not required. Agent workflows can use SDK/MCP and external signer services directly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">How do I track payment status?</h3>
+                    <p class="feature-description">Use settlement lookup and reconciliation endpoints for lifecycle visibility and pending-state refresh.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">What is public right now?</h3>
+                    <p class="feature-description">Tier A docs and interface-level material. Launch-critical protocol implementation remains private until hard gates pass.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privpedia" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Privpedia</span>
+                <h2 class="section-title">Glossary of Core Terms</h2>
+                <p class="section-subtitle">Glossary section for faster onboarding across protocol and operational language.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">P1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Facilitator</h3>
+                        <p class="step-description">Service that verifies payment payloads, submits settlements, and returns lifecycle status.</p>
+                        <code class="step-code">verify / settle / settlements / reconcile</code>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">P2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Nullifier</h3>
+                        <p class="step-description">Replay-protection value used to ensure a payment proof cannot be reused across requests.</p>
+                        <code class="step-code">Replay and idempotency control primitive</code>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">P3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Settlement Reference</h3>
+                        <p class="step-description">Identifier returned on settle that is used for payment lifecycle lookup and reconciliation updates.</p>
+                        <code class="step-code">settlement_ref</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Join Community</span>
+                <h2 class="section-title">Contribute to PrivChain</h2>
+                <p class="section-subtitle">Contribution, research, and collaboration model inspired by effective open-source communities.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <path d="M20 8v6"/><path d="M23 11h-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Contribute</h3>
+                    <p class="feature-description">Protocol, SDK, docs, and QA contributions are high impact and directly improve launch readiness.</p>
+                    <ul class="feature-list">
+                        <li>Code and test contributions</li>
+                        <li>Docs and runbook upgrades</li>
+                        <li>Adversarial scenario additions</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Research</h3>
+                    <p class="feature-description">Research track focuses on privacy proof systems, verification performance, and production hardening under pressure.</p>
+                    <ul class="feature-list">
+                        <li>Verification pipeline research</li>
+                        <li>Performance experimentation</li>
+                        <li>Threat model refinement</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Community Channels</h3>
+                    <p class="feature-description">Coordinate with maintainers, partners, and contributors on integration issues and launch readiness work.</p>
+                    <ul class="feature-list">
+                        <li>GitHub organization collaboration</li>
+                        <li>Partner and integration reviews</li>
+                        <li>Launch gate progress updates</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -363,7 +478,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Explore PrivChain Resources</h2>
-                <p class="cta-subtitle">Public mission docs, API surface references, and execution transparency artifacts are available now.</p>
+                <p class="cta-subtitle">Public mission docs, API references, branding assets, and execution artifacts are available now.</p>
                 <div class="cta-buttons">
                     <a href="https://github.com/PrivChain/privchain-website" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -394,6 +509,15 @@
                     </div>
                 </div>
                 <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Site</h4>
+                        <ul>
+                            <li><a href="#get-started">Get Started</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#community">Community</a></li>
+                        </ul>
+                    </div>
                     <div class="footer-column">
                         <h4>Public Docs</h4>
                         <ul>
