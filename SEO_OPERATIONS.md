@@ -9,6 +9,7 @@ This runbook covers search indexing, crawler discovery, and AI-agent readable co
 - `llms.txt` and `llms-full.txt` for LLM-oriented discovery.
 - `/ai/*.md` markdown corpus for efficient machine parsing.
 - JSON-LD structured data on core pages (`index.html`, `faq.html`).
+- Signup conversion funnel (`signup.html` -> `signup-success.html`) with UTM/referrer attribution capture.
 
 ## Submit to search engines
 

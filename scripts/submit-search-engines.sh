@@ -47,6 +47,7 @@ if [[ -n "${INDEXNOW_KEY:-}" ]]; then
     "https://${DOMAIN}/developers.html",
     "https://${DOMAIN}/security.html",
     "https://${DOMAIN}/faq.html",
+    "https://${DOMAIN}/signup.html",
     "https://${DOMAIN}/llms.txt",
     "https://${DOMAIN}/llms-full.txt"
   ]

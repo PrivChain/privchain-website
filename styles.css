@@ -595,6 +595,73 @@ img {
 }
 
 /* ===================================
+   Signup Funnel
+   =================================== */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.signup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.signup-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signup-form label span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form textarea {
+    width: 100%;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.signup-textarea textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.signup-consent {
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 10px !important;
+}
+
+.signup-consent input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--accent);
+}
+
+/* ===================================
    Glossary Section
    =================================== */
 .glossary {
@@ -1327,6 +1394,10 @@ img {
     }
 
     .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-grid {
         grid-template-columns: 1fr;
     }
 

@@ -7,6 +7,7 @@
 3. Integrate verify and settle lifecycle behavior.
 4. Add settlement lookup and reconciliation handling.
 5. Add SDK and MCP tools for agent-native workflows.
+6. Use early access funnel for onboarding: https://privchain.io/signup.html.
 
 ## Expected deployment model
 

@@ -12,6 +12,7 @@ Robots: https://privchain.io/robots.txt
 - Resources: https://privchain.io/resources.html
 - Security summary: https://privchain.io/security.html
 - FAQ: https://privchain.io/faq.html
+- Signup funnel: https://privchain.io/signup.html
 - Architecture: https://privchain.io/architecture.html
 - Mission: https://privchain.io/mission.html
 
