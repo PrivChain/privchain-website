@@ -12,6 +12,7 @@ Public website for PrivChain, preserving the legacy visual style while serving T
 - `developers.html`: developer availability intent
 - `styles.css`: shared visual style (ported from legacy site)
 - `assets/brand/`: logo and social media branding kit (SVG + PNG)
+- `assets/icons/`: favicon and app-icon set (ICO/PNG/manifest/pinned-tab)
 - `.github/workflows/pages.yml`: GitHub Pages deployment workflow
 - `CNAME`: custom domain configuration (`privchain.io`)
 
