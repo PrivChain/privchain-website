@@ -6,6 +6,7 @@ Public website for PrivChain, preserving the legacy visual style while serving T
 
 - `index.html`: main landing page
 - `mission.html`: mission and x402 positioning
+- `contract-economy.html`: evidence-backed PRIV contract-economy explainer
 - `architecture.html`: high-level system architecture
 - `api.html`: public interface surface
 - `signup.html`: early access signup conversion funnel

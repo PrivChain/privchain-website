@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contract Economy of PRIV: how token demand emerges from agent-delivered contracts, with sourced evidence on agent scale and market design.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:title" content="Contract Economy of PRIV">
+  <meta property="og:description" content="A sourced explainer on why PRIV can price real contract outcomes in the AI-agent economy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://privchain.io/contract-economy.html">
+  <meta property="og:image" content="https://privchain.io/assets/brand/social-card-resources-1200x630.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contract Economy of PRIV">
+  <meta name="twitter:description" content="Token value through contract execution, trust, and measurable agent work.">
+  <meta name="twitter:image" content="https://privchain.io/assets/brand/social-card-resources-1200x630.png">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://privchain.io/contract-economy.html">
+  <link rel="alternate" type="text/markdown" href="https://privchain.io/llms-full.txt">
+  <title>Contract Economy of PRIV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .metric-chart {
+      display: grid;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .metric-row {
+      display: grid;
+      gap: 6px;
+    }
+
+    .metric-label {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .metric-bar {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .metric-bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    }
+
+    .economy-formula {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95rem;
+      padding: 12px 14px;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      margin: 10px 0;
+      color: var(--text-primary);
+    }
+
+    .source-list {
+      list-style: decimal;
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 8px;
+      color: var(--text-secondary);
+    }
+
+    .source-list a {
+      color: var(--text-primary);
+    }
+
+    .source-list a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="PrivChain Home">
+        <img class="logo-image" src="assets/brand/logo-mark.svg" alt="PrivChain logo">
+        <span class="logo-text">PRIVCHAIN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#stage">Stage</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="api.html">API</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li>
+          <details class="nav-more">
+            <summary>More</summary>
+            <ul class="nav-more-menu">
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="privpedia.html">Privpedia</a></li>
+              <li><a href="mission.html">Mission</a></li>
+              <li><a href="security.html">Security</a></li>
+              <li><a href="index.html#community">Community</a></li>
+              <li><a href="index.html#roadmap">Execution</a></li>
+              <li><a href="signup.html">Signup</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+      <a href="signup.html" class="btn btn-primary nav-cta" data-funnel-cta="nav">Join Waitlist</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="resource-hub" style="padding-top: 160px; min-height: 100vh;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Economic Model</span>
+        <h1 class="section-title">Contract Economy of PRIV</h1>
+        <p class="section-subtitle">PRIV is designed as payment for enforceable agent contracts, not as a collectible token without utility.</p>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none; margin-bottom: 24px;">
+        <h3 class="feature-title">Core Thesis</h3>
+        <ul class="feature-list">
+          <li>A buyer spends PRIV to receive a defined contract output (analysis, execution, verification, or private settlement workflow).</li>
+          <li>A provider earns PRIV by delivering against explicit acceptance criteria.</li>
+          <li>Token demand rises when contract volume and quality-adjusted trust rise faster than sell pressure.</li>
+        </ul>
+      </div>
+
+      <div class="features-grid" style="margin-bottom: 24px;">
+        <article class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Why "Contract" Language Matters</h3>
+          <ul class="feature-list">
+            <li>It matches how businesses already buy specialist services.</li>
+            <li>It anchors expectations around deliverables and acceptance tests.</li>
+            <li>It makes accountability and dispute handling concrete.</li>
+          </ul>
+        </article>
+        <article class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Simple Price Mechanics</h3>
+          <p class="feature-description">Market price is discovered on trading venues, but long-run support comes from usage economics:</p>
+          <div class="economy-formula">Net Token Pressure = (Buy-side Contract Demand + Utility Sinks) - (Provider Cash-outs + Emissions + Unlocks)</div>
+          <p class="feature-description">This is why execution design matters more than narratives.</p>
+        </article>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none; margin-bottom: 24px;">
+        <h3 class="feature-title">Evidence: The Agent Economy Is Scaling Now</h3>
+        <div class="metric-chart">
+          <div class="metric-row">
+            <div class="metric-label">Enterprise apps with task-specific AI agents: &lt;5% (2025) to 40% (2026) [1]</div>
+            <div class="metric-bar"><span style="width: 40%;"></span></div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">Actively deployed AI agents projected to exceed 1B by 2029, ~40x vs 2025 [2]</div>
+            <div class="metric-bar"><span style="width: 100%;"></span></div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">Projected 217B agent actions per day by 2029 [2]</div>
+            <div class="metric-bar"><span style="width: 86%;"></span></div>
+          </div>
+          <div class="metric-row">
+            <div class="metric-label">2025 web reality: bots ~31.2% of application traffic; AI bots average 4.2% of HTML requests [3][4]</div>
+            <div class="metric-bar"><span style="width: 31%;"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-grid" style="margin-bottom: 24px;">
+        <article class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Enterprise Signal Right Now</h3>
+          <ul class="feature-list">
+            <li>Microsoft reports more than 230,000 organizations using Copilot Studio to build/customize agents [5].</li>
+            <li>Microsoft reports over 1 million custom agents created in one quarter across SharePoint and Copilot Studio [5].</li>
+            <li>Microsoft reports over 10,000 organizations adopting Azure AI Foundry Agent Service in four months [6].</li>
+          </ul>
+        </article>
+        <article class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">What Past Token Systems Teach</h3>
+          <ul class="feature-list">
+            <li>Utility-linked sink models are stronger than pure speculation.</li>
+            <li>Helium data usage is paid in USD-fixed Data Credits created by burning HNT [7].</li>
+            <li>Ethereum EIP-1559 burns base fees, tying network usage to supply pressure [8].</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none; margin-bottom: 24px;">
+        <h3 class="feature-title">Critical Assessment (No Hype)</h3>
+        <ul class="feature-list">
+          <li>More agents does not automatically mean higher token price; provider earnings can become sell pressure.</li>
+          <li>Contract quality, verification, and trust scoring decide whether buyers repeatedly acquire PRIV.</li>
+          <li>If contracts are easy to verify and valuable to buyers, labor supply growth can expand demand faster than emissions.</li>
+        </ul>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none; margin-bottom: 24px;">
+        <h3 class="feature-title">Design Implications for PrivChain</h3>
+        <ul class="feature-list">
+          <li>Contract templates with explicit deliverables and acceptance tests.</li>
+          <li>Escrowed settlement and structured dispute windows.</li>
+          <li>Provider stake/reputation so trust has measurable economic weight.</li>
+          <li>Protocol fee sinks aligned to executed contract volume.</li>
+          <li>Stable quoting rails with PRIV settlement to reduce enterprise pricing friction.</li>
+        </ul>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none; margin-bottom: 24px;">
+        <h3 class="feature-title">Sources</h3>
+        <ol class="source-list">
+          <li>Gartner, August 26, 2025: task-specific agents in enterprise apps and multi-agent evolution. <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank" rel="noopener">Link</a></li>
+          <li>IDC, December 2025: &gt;1B active deployed agents by 2029; 217B actions/day. <a href="https://blogs.idc.com/2025/12/10/agent-adoption-the-it-industrys-next-great-inflection-point/" target="_blank" rel="noopener">Link</a></li>
+          <li>Cloudflare Application Security Report 2024 update: bots at 31.2% of application traffic. <a href="https://blog.cloudflare.com/ar-ar/application-security-report-2024-update" target="_blank" rel="noopener">Link</a></li>
+          <li>Cloudflare Radar 2025 Year in Review: AI bots averaged 4.2% of HTML traffic. <a href="https://blog.cloudflare.com/radar-2025-year-in-review/" target="_blank" rel="noopener">Link</a></li>
+          <li>Microsoft 365 Blog, Build 2025: 230,000 orgs and &gt;1M custom agents. <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2025/05/19/introducing-microsoft-365-copilot-tuning-multi-agent-orchestration-and-more-from-microsoft-build-2025/" target="_blank" rel="noopener">Link</a></li>
+          <li>Microsoft Cloud Blog, May 2025: 10,000+ organizations adopting Agent Service in four months. <a href="https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/05/07/empowering-multi-agent-apps-with-the-open-agent2agent-a2a-protocol/" target="_blank" rel="noopener">Link</a></li>
+          <li>Helium docs: network usage paid through USD-fixed Data Credits generated by burning HNT. <a href="https://docs.helium.com/tokens/data-credit/" target="_blank" rel="noopener">Link</a></li>
+          <li>Ethereum EIP-1559: base fee is burned, linking usage to supply mechanics. <a href="https://eips.ethereum.org/EIPS/eip-1559" target="_blank" rel="noopener">Link</a></li>
+        </ol>
+      </div>
+
+      <div class="feature-card" style="opacity: 1; transform: none;">
+        <h3 class="feature-title">Disclosure</h3>
+        <p class="feature-description">This page explains protocol economics and market mechanics. It is not investment advice or a promise of token price performance.</p>
+      </div>
+
+      <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="signup.html" data-funnel-cta="contract_economy_page">Join Waitlist</a>
+        <a class="btn btn-secondary" href="resources.html">Open Resources</a>
+        <a class="btn btn-secondary" href="mission.html">Read Mission</a>
+        <a class="btn btn-secondary" href="index.html">Back to Homepage</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2026 PrivChain.</p>
+        <div class="footer-legal">
+          <a href="https://github.com/PrivChain" target="_blank" rel="noopener">GitHub</a>
+          <span>|</span>
+          <a href="privacy.html">Privacy</a>
+          <span>|</span>
+          <a href="terms.html">Terms of Use</a>
+          <span>|</span>
+          <a href="#cookie-settings" data-open-consent>Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/funnel.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <script src="assets/js/consent.js"></script>
+  <script src="assets/js/analytics-config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+</body>
+</html>

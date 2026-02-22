@@ -15,6 +15,7 @@ Robots: https://privchain.io/robots.txt
 - Signup funnel: https://privchain.io/signup.html
 - Architecture: https://privchain.io/architecture.html
 - Mission: https://privchain.io/mission.html
+- Contract economy: https://privchain.io/contract-economy.html
 - Privacy policy: https://privchain.io/privacy.html
 - Terms of use: https://privchain.io/terms.html
 

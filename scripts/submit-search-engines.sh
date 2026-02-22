@@ -45,6 +45,7 @@ if [[ -n "${INDEXNOW_KEY:-}" ]]; then
     "https://${DOMAIN}/api.html",
     "https://${DOMAIN}/architecture.html",
     "https://${DOMAIN}/mission.html",
+    "https://${DOMAIN}/contract-economy.html",
     "https://${DOMAIN}/resources.html",
     "https://${DOMAIN}/developers.html",
     "https://${DOMAIN}/security.html",
