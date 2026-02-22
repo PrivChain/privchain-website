@@ -19,6 +19,14 @@ Use these files for social media and GitHub branding.
 - `social-avatar-1024.png`: profile/avatar image (X, Telegram, Discord, etc.)
 - `social-banner-1500x500.png`: header/banner image
 - `social-card-1200x630.png`: Open Graph/Twitter card image
+- `social-card-resources-1200x630.png`: social card for `resources.html`
+- `social-card-faq-1200x630.png`: social card for `faq.html`
+- `social-card-privpedia-1200x630.png`: social card for `privpedia.html`
+- `social-card-mission-1200x630.png`: social card for `mission.html`
+- `social-card-api-1200x630.png`: social card for `api.html`
+- `social-card-architecture-1200x630.png`: social card for `architecture.html`
+- `social-card-developers-1200x630.png`: social card for `developers.html`
+- `social-card-security-1200x630.png`: social card for `security.html`
 
 ## Favicons and App Icons
 
