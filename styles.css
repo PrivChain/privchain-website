@@ -541,6 +541,159 @@ img {
 }
 
 /* ===================================
+   Resource Sections
+   =================================== */
+.resource-hub {
+    padding: var(--section-padding) 0;
+    background: var(--bg-secondary);
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.resource-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all var(--transition-normal);
+}
+
+.resource-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.resource-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.resource-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.resource-card p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.resource-card a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.resource-card a:hover {
+    color: var(--accent-dim);
+}
+
+/* ===================================
+   Glossary Section
+   =================================== */
+.glossary {
+    padding: var(--section-padding) 0;
+}
+
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.glossary-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-normal);
+}
+
+.glossary-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.glossary-item:hover {
+    border-color: var(--border-light);
+}
+
+.glossary-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.glossary-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* ===================================
+   FAQ Section
+   =================================== */
+.faq-section {
+    padding: var(--section-padding) 0;
+    background: var(--bg-secondary);
+}
+
+.faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    padding: 0 22px 18px;
+    line-height: 1.7;
+}
+
+/* ===================================
    How It Works Section
    =================================== */
 .how-it-works {
@@ -1114,6 +1267,14 @@ img {
         gap: 20px;
     }
 
+    .resource-grid {
+        gap: 20px;
+    }
+
+    .glossary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .tokenomics-content {
         gap: 40px;
     }
@@ -1165,8 +1326,20 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glossary-grid {
+        grid-template-columns: 1fr;
+    }
+
     .feature-card {
         padding: 32px;
+    }
+
+    .resource-card {
+        padding: 28px;
     }
 
     .step {
@@ -1253,6 +1426,10 @@ img {
     }
 
     .feature-card {
+        padding: 24px;
+    }
+
+    .resource-card {
         padding: 24px;
     }
 

@@ -35,6 +35,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#get-started">Get Started</a></li>
                 <li><a href="#resources">Resources</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#roadmap">Execution</a></li>
                 <li><a href="api.html">API</a></li>
@@ -216,129 +217,98 @@
         </div>
     </section>
 
-    <section id="resources" class="tokenomics">
+    <section id="resources" class="resource-hub">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Guides and Resources</span>
                 <h2 class="section-title">Learn, Build, and Operate</h2>
-                <p class="section-subtitle">A structured resource model: guides, glossary, and practical operational references.</p>
+                <p class="section-subtitle">A structured resource model for onboarding, integration, and operational readiness.</p>
             </div>
-            <div class="tokenomics-content">
-                <div class="tokenomics-chart">
-                    <div class="chart-placeholder">
-                        <div class="chart-ring">
-                            <svg viewBox="0 0 200 200">
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#1a1a1a" stroke-width="20"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00ff88" stroke-width="20" stroke-dasharray="126 503" stroke-dashoffset="0" class="chart-segment seg-1"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00cc6a" stroke-width="20" stroke-dasharray="126 503" stroke-dashoffset="-126" class="chart-segment seg-2"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00aa55" stroke-width="20" stroke-dasharray="126 503" stroke-dashoffset="-252" class="chart-segment seg-3"/>
-                                <circle cx="100" cy="100" r="80" fill="none" stroke="#008844" stroke-width="20" stroke-dasharray="125 503" stroke-dashoffset="-378" class="chart-segment seg-4"/>
-                            </svg>
-                            <div class="chart-center">
-                                <span class="chart-total">4</span>
-                                <span class="chart-label">Lanes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chart-legend">
-                        <div class="legend-item"><span class="legend-color" style="background: #00ff88"></span>User Guides</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #00cc6a"></span>Developer Guides</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #00aa55"></span>Privpedia</div>
-                        <div class="legend-item"><span class="legend-color" style="background: #008844"></span>FAQ</div>
-                    </div>
-                </div>
-                <div class="tokenomics-details">
-                    <div class="utility-list">
-                        <h4>User and Developer Guides</h4>
-                        <ul>
-                            <li><strong>User Path</strong> - wallet setup, first private payment, lifecycle checks</li>
-                            <li><strong>Developer Path</strong> - TypeScript/Python SDK and MCP integrations</li>
-                            <li><strong>Operational Path</strong> - signer runbooks, audit workflows, release gates</li>
-                        </ul>
-                    </div>
-                    <div class="utility-list" style="margin-top: 18px;">
-                        <h4>Reference Surfaces</h4>
-                        <ul>
-                            <li><strong>API</strong> - <a href="api.html">verify, settle, reconcile, health</a></li>
-                            <li><strong>Mission</strong> - <a href="mission.html">x402 positioning and product focus</a></li>
-                            <li><strong>Developer Intent</strong> - <a href="developers.html">release and integration direction</a></li>
-                        </ul>
-                    </div>
-                    <div class="utility-list" style="margin-top: 18px;">
-                        <h4>Glossary and FAQ</h4>
-                        <ul>
-                            <li><strong>Privpedia</strong> - quick definitions for protocol and operations terms</li>
-                            <li><strong>FAQ</strong> - direct answers for adoption and deployment questions</li>
-                            <li><strong>Evidence</strong> - CI, security audit, and partner packet outputs</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="resource-grid">
+                <article class="resource-card">
+                    <h3>User Guides</h3>
+                    <p>Wallet setup, first payment path, and lifecycle checks for private settlement operations.</p>
+                    <a href="#get-started">Open onboarding guide</a>
+                </article>
+                <article class="resource-card">
+                    <h3>Developer Guides</h3>
+                    <p>SDK/MCP integration paths plus endpoint semantics for verify, settle, lookup, and reconciliation.</p>
+                    <a href="api.html">Read API surface</a>
+                </article>
+                <article class="resource-card">
+                    <h3>Architecture and Mission</h3>
+                    <p>Protocol positioning, boundaries, and implementation direction for launch-critical delivery.</p>
+                    <a href="mission.html">View mission brief</a>
+                </article>
+                <article class="resource-card">
+                    <h3>Operations and Security</h3>
+                    <p>Security posture, runbook intent, and release discipline for pre-launch hardening.</p>
+                    <a href="security.html">Open security summary</a>
+                </article>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="features">
+    <section id="faq" class="faq-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">FAQ</span>
                 <h2 class="section-title">Common Questions</h2>
                 <p class="section-subtitle">Fast answers to recurring questions from developers, operators, and partners.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3 class="feature-title">Is PrivChain replacing x402?</h3>
-                    <p class="feature-description">No. PrivChain integrates with x402-compatible payment semantics and specializes in privacy infrastructure.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title">Do I need a wallet UI app?</h3>
-                    <p class="feature-description">Not required. Agent workflows can use SDK/MCP and external signer services directly.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title">How do I track payment status?</h3>
-                    <p class="feature-description">Use settlement lookup and reconciliation endpoints for lifecycle visibility and pending-state refresh.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title">What is public right now?</h3>
-                    <p class="feature-description">Tier A docs and interface-level material. Launch-critical protocol implementation remains private until hard gates pass.</p>
-                </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Is PrivChain replacing x402?</summary>
+                    <p>No. PrivChain integrates with x402-compatible payment semantics and specializes in privacy infrastructure.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need a wallet UI app?</summary>
+                    <p>Not required. Agent workflows can use SDK/MCP and external signer services directly.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I track payment status?</summary>
+                    <p>Use settlement lookup and reconciliation endpoints for lifecycle visibility and pending-state refresh.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is public right now?</summary>
+                    <p>Tier A docs and interface-level material. Launch-critical protocol implementation remains private until hard gates pass.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <section id="privpedia" class="how-it-works">
+    <section id="privpedia" class="glossary">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Privpedia</span>
                 <h2 class="section-title">Glossary of Core Terms</h2>
                 <p class="section-subtitle">Glossary section for faster onboarding across protocol and operational language.</p>
             </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">P1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Facilitator</h3>
-                        <p class="step-description">Service that verifies payment payloads, submits settlements, and returns lifecycle status.</p>
-                        <code class="step-code">verify / settle / settlements / reconcile</code>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">P2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Nullifier</h3>
-                        <p class="step-description">Replay-protection value used to ensure a payment proof cannot be reused across requests.</p>
-                        <code class="step-code">Replay and idempotency control primitive</code>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">P3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Settlement Reference</h3>
-                        <p class="step-description">Identifier returned on settle that is used for payment lifecycle lookup and reconciliation updates.</p>
-                        <code class="step-code">settlement_ref</code>
-                    </div>
-                </div>
+            <div class="glossary-grid">
+                <article class="glossary-item">
+                    <h3>Facilitator</h3>
+                    <p>Service that verifies payment payloads, submits settlements, and returns lifecycle status.</p>
+                </article>
+                <article class="glossary-item">
+                    <h3>Nullifier</h3>
+                    <p>Replay-protection value used to ensure a payment proof cannot be reused across requests.</p>
+                </article>
+                <article class="glossary-item">
+                    <h3>Settlement Reference</h3>
+                    <p>Identifier returned on settle used for lifecycle lookup and reconciliation updates.</p>
+                </article>
+                <article class="glossary-item">
+                    <h3>Reconciliation</h3>
+                    <p>Operation that refreshes and reclassifies long-pending settlement states.</p>
+                </article>
+                <article class="glossary-item">
+                    <h3>Signer Path</h3>
+                    <p>Workflow for secure transaction authorization using local keys or remote KMS/HSM backends.</p>
+                </article>
+                <article class="glossary-item">
+                    <h3>Payment Scheme</h3>
+                    <p>The scheme identifier that binds payload structure and verification semantics.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -579,7 +549,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.feature-card, .step, .timeline-item').forEach(el => {
+        document.querySelectorAll('.feature-card, .resource-card, .step, .timeline-item, .glossary-item').forEach(el => {
             observer.observe(el);
         });
     </script>
