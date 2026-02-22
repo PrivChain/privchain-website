@@ -80,6 +80,7 @@ PrivChain is privacy infrastructure for machine-native payments, designed to int
 - Resource center: https://privchain.io/resources.html
 - Security summary: https://privchain.io/security.html
 - FAQ: https://privchain.io/faq.html
+- Signup funnel: https://privchain.io/signup.html
 
 ## Machine-readable Markdown
 

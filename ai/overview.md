@@ -21,3 +21,4 @@ PrivChain is privacy infrastructure for machine-native payments.
 - Developers: https://privchain.io/developers.html
 - Resources: https://privchain.io/resources.html
 - Security: https://privchain.io/security.html
+- Signup: https://privchain.io/signup.html
