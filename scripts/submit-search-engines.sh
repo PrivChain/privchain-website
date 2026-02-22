@@ -16,7 +16,14 @@ fi
 
 echo "Submitting sitemap to Bing..."
 BING_URL="https://www.bing.com/ping?sitemap=${SITEMAP_URL}"
-curl -fsS "${BING_URL}" >/dev/null && echo "OK: Bing ping accepted"
+bing_status="$(curl -sS -o /dev/null -w "%{http_code}" "${BING_URL}" || true)"
+if [[ "${bing_status}" == "200" ]]; then
+  echo "OK: Bing ping accepted"
+elif [[ "${bing_status}" == "410" ]]; then
+  echo "INFO: Bing ping endpoint returned 410 (deprecated). Use Bing Webmaster Tools submission."
+else
+  echo "INFO: Bing ping returned HTTP ${bing_status}. Use Bing Webmaster Tools submission."
+fi
 
 echo
 echo "Checking AI crawler access points..."
