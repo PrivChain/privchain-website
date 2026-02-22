@@ -10,10 +10,13 @@ Public website for PrivChain, preserving the legacy visual style while serving T
 - `api.html`: public interface surface
 - `signup.html`: early access signup conversion funnel
 - `signup-success.html`: post-signup confirmation
+- `privacy.html`: GDPR-oriented privacy policy
+- `terms.html`: website terms of use
 - `security.html`: public security controls summary
 - `developers.html`: developer availability intent
 - `styles.css`: shared visual style (ported from legacy site)
 - `assets/js/funnel.js`: attribution and funnel tracking helper
+- `assets/js/consent.js`: consent manager for optional analytics
 - `assets/brand/`: logo and social media branding kit (SVG + PNG)
 - `assets/icons/`: favicon and app-icon set (ICO/PNG/manifest/pinned-tab)
 - `robots.txt`: crawler policy and sitemap declaration

@@ -18,4 +18,5 @@ The following areas are intentionally withheld pre-release:
 ## Security references
 
 - Security summary: https://privchain.io/security.html
+- Privacy policy: https://privchain.io/privacy.html
 - Organization security policy: https://github.com/PrivChain/.github/blob/main/SECURITY.md

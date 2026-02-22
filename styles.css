@@ -1389,6 +1389,52 @@ img {
 }
 
 /* ===================================
+   Cookie Banner
+   =================================== */
+.cookie-banner {
+    position: fixed;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    background: rgba(14, 14, 14, 0.96);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.cookie-banner__content h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.cookie-banner__content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.cookie-banner__content a {
+    color: var(--accent);
+}
+
+.cookie-banner__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    white-space: nowrap;
+}
+
+/* ===================================
    Responsive Design
    =================================== */
 @media (max-width: 1024px) {
@@ -1559,6 +1605,20 @@ img {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+    }
+
+    .cookie-banner {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .cookie-banner__actions .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
