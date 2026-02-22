@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PrivChain is a privacy layer for x402-compatible machine payments. Privacy-preserving verification, settlement lifecycle visibility, and secure signer workflows.">
-    <meta name="keywords" content="PrivChain, x402, privacy, agent payments, zk, MCP">
+    <meta name="description" content="PrivChain is x402-compatible privacy infrastructure for agent-to-agent and agent-to-service payments.">
+    <meta name="keywords" content="PrivChain, PRIV, x402, private payments, agent economy, MCP, KMS">
     <meta property="og:title" content="PrivChain | Private Payments for Agents">
-    <meta property="og:description" content="x402-compatible privacy infrastructure for agent-to-agent and agent-to-service payments.">
+    <meta property="og:description" content="x402-compatible privacy infrastructure with secure signer workflows and MCP-native tooling.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://privchain.io/assets/brand/social-card-1200x630.png">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://privchain.io/assets/brand/social-card-1200x630.png">
     <title>PrivChain | Private Payments for Agents</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,18 +20,18 @@
 <body>
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">◈</span>
+            <a href="#" class="logo" aria-label="PrivChain Home">
+                <img class="logo-image" src="assets/brand/logo-mark.svg" alt="PrivChain logo">
                 <span class="logo-text">PRIVCHAIN</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#api">API</a></li>
-                <li><a href="#security">Security</a></li>
-                <li><a href="#developers">Developers</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#surface">Launch Surface</a></li>
+                <li><a href="#roadmap">Execution</a></li>
+                <li><a href="api.html">API</a></li>
             </ul>
-            <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary nav-cta">GitHub Org</a>
+            <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary nav-cta">GitHub</a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -46,14 +48,14 @@
         <div class="container hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Pre-release Public Brief
+                Live at PrivChain.io
             </div>
             <h1 class="hero-title">
                 PrivChain<br>
                 <span class="gradient-text">Private Payments for Agents</span>
             </h1>
             <p class="hero-subtitle">
-                PrivChain is a privacy layer for x402-compatible machine payments. We focus on privacy-preserving verification, settlement lifecycle visibility, and secure signer workflows.
+                PrivChain integrates with x402 payment semantics and focuses on privacy infrastructure: proof-aware verification, settlement lifecycle control, and secure signer workflows.
             </p>
             <div class="hero-stats">
                 <div class="stat">
@@ -63,7 +65,7 @@
                 <div class="stat-divider"></div>
                 <div class="stat">
                     <span class="stat-value">PRIV</span>
-                    <span class="stat-label">Token Symbol</span>
+                    <span class="stat-label">On Solana</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
@@ -77,8 +79,14 @@
                 </div>
             </div>
             <div class="hero-cta">
-                <a href="api.html" class="btn btn-primary btn-lg">View Public API Surface</a>
-                <a href="#architecture" class="btn btn-secondary btn-lg">Explore Architecture</a>
+                <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View Organization
+                </a>
+                <a href="mission.html" class="btn btn-secondary btn-lg">
+                    Read Mission Brief
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -87,46 +95,94 @@
         </div>
     </section>
 
-    <section id="mission" class="features">
+    <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Mission</span>
-                <h2 class="section-title">Privacy Is the Product Layer</h2>
-                <p class="section-subtitle">PrivChain integrates with x402 payment semantics and focuses engineering effort on privacy infrastructure.</p>
+                <span class="section-tag">Core Capabilities</span>
+                <h2 class="section-title">Built Around Privacy Infrastructure</h2>
+                <p class="section-subtitle">PrivChain is not a payment transport replacement. It is the privacy layer for machine payment flows.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-                    <h3 class="feature-title">x402-Compatible</h3>
-                    <p class="feature-description">PrivChain aligns with x402 payment flow patterns instead of introducing a competing payment transport.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 12h18"/>
+                            <path d="M6 7h12"/>
+                            <path d="M6 17h12"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">x402-First Compatibility</h3>
+                    <p class="feature-description">Facilitator flows are built to align with x402 semantics so developers can adopt privacy without changing transport assumptions.</p>
+                    <ul class="feature-list">
+                        <li>HTTP-native payment flow integration</li>
+                        <li>Scheme support for <code>priv-stark/v1</code></li>
+                        <li>Deterministic verify and settle semantics</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16"/><path d="M12 4v16"/></svg></div>
-                    <h3 class="feature-title">Privacy Layer</h3>
-                    <p class="feature-description">Verification semantics and settlement orchestration are designed for private agent transaction workflows.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Proof-Aware Verification</h3>
+                    <p class="feature-description">Payload validation, replay controls, and expiry enforcement are engineered into the facilitator verification and settlement pipeline.</p>
+                    <ul class="feature-list">
+                        <li>Replay and idempotency controls</li>
+                        <li>External verifier integration path</li>
+                        <li>Structured machine-readable errors</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg></div>
-                    <h3 class="feature-title">MCP-Native</h3>
-                    <p class="feature-description">Model Context Protocol tooling enables AI agents to execute payment, settlement lookup, and reconciliation actions.</p>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M7 7h.01"/><path d="M17 17h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">MCP-Native Agent Tooling</h3>
+                    <p class="feature-description">Native MCP tools allow AI agents to execute payments, check settlement state, and trigger reconciliation as part of automation pipelines.</p>
+                    <ul class="feature-list">
+                        <li><code>privchain_pay</code></li>
+                        <li><code>privchain_get_settlement</code></li>
+                        <li><code>privchain_reconcile</code></li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v8"/>
+                            <path d="M9 12h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Secure Signer Architecture</h3>
+                    <p class="feature-description">Signer workflows support local development keys and production-grade remote signing backends with KMS/HSM-compatible custody paths.</p>
+                    <ul class="feature-list">
+                        <li>Remote signer contract: <code>POST /sign-intent</code></li>
+                        <li>AWS KMS backend support</li>
+                        <li>Non-custodial deployment model</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="architecture" class="how-it-works">
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Architecture</span>
-                <h2 class="section-title">Public System View</h2>
-                <p class="section-subtitle">Component names and interfaces are public; implementation internals remain private pre-release.</p>
+                <span class="section-tag">Flow</span>
+                <h2 class="section-title">How PrivChain Operates</h2>
+                <p class="section-subtitle">A focused three-step flow from intent signing to settlement lifecycle control.</p>
             </div>
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3 class="step-title">Client and Signer</h3>
-                        <p class="step-description">SDK or MCP client prepares a payment intent and obtains signed material via the signer service.</p>
+                        <h3 class="step-title">Sign Payment Intent</h3>
+                        <p class="step-description">Client uses SDK or MCP path to request signing material from the signer service with nonce and expiry safety.</p>
                         <code class="step-code">POST /sign-intent</code>
                     </div>
                 </div>
@@ -134,49 +190,86 @@
                 <div class="step">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3 class="step-title">Facilitator Verification</h3>
-                        <p class="step-description">Facilitator validates payload shape, replay/idempotency controls, and proof envelope semantics.</p>
-                        <code class="step-code">POST /verify</code>
+                        <h3 class="step-title">Verify and Settle</h3>
+                        <p class="step-description">Facilitator validates proof envelope and submits settlement through the configured chain adapter under replay-safe semantics.</p>
+                        <code class="step-code">POST /verify → POST /settle</code>
                     </div>
                 </div>
                 <div class="step-connector"></div>
                 <div class="step">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                        <h3 class="step-title">Settlement and Lifecycle</h3>
-                        <p class="step-description">Settlement is submitted through chain adapters and tracked with lookup + reconciliation interfaces.</p>
-                        <code class="step-code">POST /settle • GET /settlements/:ref • POST /reconcile</code>
+                        <h3 class="step-title">Track and Reconcile</h3>
+                        <p class="step-description">Clients retrieve settlement lifecycle status and run reconciliation for pending states with alert hooks.</p>
+                        <code class="step-code">GET /settlements/:ref → POST /reconcile</code>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="api" class="tokenomics">
+    <section id="surface" class="tokenomics">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Public Interface Surface</span>
-                <h2 class="section-title">Endpoints and Tools</h2>
-                <p class="section-subtitle">Tier A-safe interface list. No production hostnames or credentials are published here.</p>
+                <span class="section-tag">Current Delivery Surface</span>
+                <h2 class="section-title">Launch Components</h2>
+                <p class="section-subtitle">PrivChain is shipping a complete integration surface across protocol, SDK, MCP, signer, and docs.</p>
             </div>
             <div class="tokenomics-content">
-                <div class="tokenomics-details" style="width: 100%;">
-                    <div class="utility-list">
-                        <h4>Facilitator Endpoints</h4>
-                        <ul>
-                            <li><strong>POST /verify</strong> - validate payment payload and privacy envelope</li>
-                            <li><strong>POST /settle</strong> - submit settlement request through configured adapter</li>
-                            <li><strong>GET /settlements/:settlementRef</strong> - fetch settlement lifecycle state</li>
-                            <li><strong>POST /reconcile</strong> - refresh pending settlement statuses in bulk</li>
-                            <li><strong>GET /health</strong> - service readiness and status</li>
-                        </ul>
+                <div class="tokenomics-chart">
+                    <div class="chart-placeholder">
+                        <div class="chart-ring">
+                            <svg viewBox="0 0 200 200">
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#1a1a1a" stroke-width="20"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00ff88" stroke-width="20" stroke-dasharray="90 503" stroke-dashoffset="0" class="chart-segment seg-1"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00cc6a" stroke-width="20" stroke-dasharray="84 503" stroke-dashoffset="-90" class="chart-segment seg-2"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#00aa55" stroke-width="20" stroke-dasharray="84 503" stroke-dashoffset="-174" class="chart-segment seg-3"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#008844" stroke-width="20" stroke-dasharray="82 503" stroke-dashoffset="-258" class="chart-segment seg-4"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#006633" stroke-width="20" stroke-dasharray="82 503" stroke-dashoffset="-340" class="chart-segment seg-5"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#004422" stroke-width="20" stroke-dasharray="81 503" stroke-dashoffset="-422" class="chart-segment seg-6"/>
+                            </svg>
+                            <div class="chart-center">
+                                <span class="chart-total">6</span>
+                                <span class="chart-label">Tracks</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="utility-list" style="margin-top: 24px;">
-                        <h4>Scheme, Signer, MCP</h4>
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="legend-color" style="background: #00ff88"></span>Protocol Facilitator</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #00cc6a"></span>TypeScript SDK</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #00aa55"></span>Python SDK</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #008844"></span>MCP Server</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #006633"></span>Wallet Signer Service</div>
+                        <div class="legend-item"><span class="legend-color" style="background: #004422"></span>Examples and Docs</div>
+                    </div>
+                </div>
+                <div class="tokenomics-details">
+                    <div class="token-info">
+                        <div class="token-stat">
+                            <span class="token-stat-label">Token Symbol</span>
+                            <span class="token-stat-value">PRIV</span>
+                        </div>
+                        <div class="token-stat">
+                            <span class="token-stat-label">Chain Presence</span>
+                            <span class="token-stat-value">Solana</span>
+                        </div>
+                        <div class="token-stat">
+                            <span class="token-stat-label">Primary Mode</span>
+                            <span class="token-stat-value">x402-Compatible</span>
+                        </div>
+                        <div class="token-stat">
+                            <span class="token-stat-label">Privacy Scheme</span>
+                            <span class="token-stat-value">priv-stark/v1</span>
+                        </div>
+                    </div>
+                    <div class="utility-list">
+                        <h4>Public Interface Surface</h4>
                         <ul>
-                            <li><strong>Payment Scheme:</strong> <code>priv-stark/v1</code></li>
-                            <li><strong>Signer Endpoint:</strong> <code>POST /sign-intent</code></li>
-                            <li><strong>MCP Tools:</strong> <code>privchain_pay</code>, <code>privchain_get_settlement</code>, <code>privchain_reconcile</code></li>
+                            <li><strong>Facilitator</strong> — verify, settle, reconcile, health, settlement lookup</li>
+                            <li><strong>Signer</strong> — authenticated payment intent signing</li>
+                            <li><strong>SDKs</strong> — TypeScript + Python client paths</li>
+                            <li><strong>MCP</strong> — agent payment and lifecycle tooling</li>
+                            <li><strong>Evidence</strong> — CI, audit, and partner packet exports</li>
                         </ul>
                     </div>
                 </div>
@@ -184,59 +277,95 @@
         </div>
     </section>
 
-    <section id="security" class="roadmap">
+    <section id="roadmap" class="roadmap">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Security Posture</span>
-                <h2 class="section-title">Public Security Summary</h2>
-                <p class="section-subtitle">High-level controls only. Detailed threat model and infrastructure topology remain private pre-release.</p>
+                <span class="section-tag">Execution Tracks</span>
+                <h2 class="section-title">Launch Progress</h2>
+                <p class="section-subtitle">Current execution status and immediate next hardening priorities.</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item active">
-                    <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Request Controls</h3>
+                        <span class="timeline-date">Completed</span>
+                        <h3 class="timeline-title">Foundation Buildout</h3>
                         <ul class="timeline-list">
-                            <li>Replay protection for payment payloads</li>
-                            <li>Idempotency enforcement for verify and settle paths</li>
-                            <li>Optional bearer auth for protected deployments</li>
+                            <li>x402-compatible facilitator surface</li>
+                            <li>SDK, MCP, examples, and signer integrations</li>
+                            <li>Tier A/Tier B disclosure and export workflows</li>
                         </ul>
+                        <span class="timeline-status completed">Done</span>
                     </div>
                 </div>
                 <div class="timeline-item current">
-                    <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Operational Controls</h3>
+                        <span class="timeline-date">In Progress</span>
+                        <h3 class="timeline-title">Security Hardening</h3>
                         <ul class="timeline-list">
-                            <li>Structured error handling for deterministic clients</li>
-                            <li>Settlement lifecycle status and reconciliation path</li>
-                            <li>Alerting hooks for stale or failed refresh conditions</li>
+                            <li>Automated internal testnet security audit cycle</li>
+                            <li>Adversarial drill expansion and remediation</li>
+                            <li>Launch hard-gate evidence consolidation</li>
                         </ul>
+                        <span class="timeline-status in-progress">Active</span>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"><div class="marker-dot"></div></div>
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Key Management Direction</h3>
+                        <span class="timeline-date">Next</span>
+                        <h3 class="timeline-title">External Audit Engagement</h3>
                         <ul class="timeline-list">
-                            <li>External signer isolation (non-custodial path)</li>
-                            <li>AWS KMS backend support</li>
-                            <li>HSM-compatible custody path via KMS custom key stores</li>
+                            <li>Third-party security audit execution</li>
+                            <li>Critical/high remediation and re-test cycle</li>
+                            <li>Final security-owner acceptance for launch</li>
                         </ul>
+                        <span class="timeline-status upcoming">Pending</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Launch Gate</span>
+                        <h3 class="timeline-title">Public Developer Rollout</h3>
+                        <ul class="timeline-list">
+                            <li>Hard-gate sign-off (founder, engineering, security)</li>
+                            <li>Controlled repo visibility changes</li>
+                            <li>Developer documentation and ecosystem onboarding</li>
+                        </ul>
+                        <span class="timeline-status upcoming">Pending</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="developers" class="cta-section">
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Developer Availability Intent</h2>
-                <p class="cta-subtitle">SDK and MCP surfaces are being prepared for staged public release once compatibility, security, and disclosure gates are approved.</p>
+                <h2 class="cta-title">Explore PrivChain Resources</h2>
+                <p class="cta-subtitle">Public mission docs, API surface references, and execution transparency artifacts are available now.</p>
                 <div class="cta-buttons">
-                    <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary btn-lg">PrivChain Organization</a>
-                    <a href="mission.html" class="btn btn-secondary btn-lg">Read Tier A Docs</a>
+                    <a href="https://github.com/PrivChain/privchain-website" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        View Website Repo
+                    </a>
+                    <a href="developers.html" class="btn btn-secondary btn-lg">Developer Intent</a>
+                </div>
+                <div class="cta-code">
+                    <code>Tier A public docs at privchain.io with launch-gated protocol code kept private.</code>
                 </div>
             </div>
         </div>
@@ -246,11 +375,16 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-icon">◈</span>
+                    <a href="#" class="logo" aria-label="PrivChain Home">
+                        <img class="logo-image" src="assets/brand/logo-mark.svg" alt="PrivChain logo">
                         <span class="logo-text">PRIVCHAIN</span>
                     </a>
                     <p class="footer-tagline">Private Payments for the Agent Economy</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/PrivChain" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
@@ -263,11 +397,12 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Developer Intent</h4>
+                        <h4>Brand Assets</h4>
                         <ul>
-                            <li><a href="developers.html">Availability</a></li>
-                            <li><a href="https://github.com/PrivChain" target="_blank" rel="noopener">GitHub Org</a></li>
-                            <li><a href="https://privchain.io" target="_blank" rel="noopener">PrivChain.io</a></li>
+                            <li><a href="assets/brand/logo-mark-1024.png">Logo Mark PNG</a></li>
+                            <li><a href="assets/brand/social-avatar-1024.png">Social Avatar PNG</a></li>
+                            <li><a href="assets/brand/social-banner-1500x500.png">Social Banner PNG</a></li>
+                            <li><a href="assets/brand/logo-wordmark.svg">Wordmark SVG</a></li>
                         </ul>
                     </div>
                 </div>

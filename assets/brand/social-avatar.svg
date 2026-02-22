@@ -1,0 +1,17 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pcg" x1="168" y1="120" x2="856" y2="904" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00FF88"/>
+      <stop offset="1" stop-color="#00AA55"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+      <stop stop-color="#151515"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="180" fill="url(#bg)"/>
+  <path d="M512 132L820 310V674L512 852L204 674V310L512 132Z" stroke="url(#pcg)" stroke-width="46"/>
+  <path d="M512 314L670 406V596L512 688L354 596V406L512 314Z" stroke="url(#pcg)" stroke-width="38"/>
+  <circle cx="512" cy="500" r="62" fill="url(#pcg)"/>
+  <path d="M416 592L512 650L608 592" stroke="url(#pcg)" stroke-width="38" stroke-linecap="round"/>
+</svg>

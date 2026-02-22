@@ -1,0 +1,17 @@
+<svg width="1600" height="420" viewBox="0 0 1600 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pcg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00FF88"/>
+      <stop offset="1" stop-color="#00AA55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="420" rx="40" fill="#0A0A0A"/>
+  <g transform="translate(48,42)">
+    <path d="M168 0L336 96V288L168 384L0 288V96L168 0Z" stroke="url(#pcg)" stroke-width="24"/>
+    <path d="M168 98L248 144V240L168 286L88 240V144L168 98Z" stroke="url(#pcg)" stroke-width="20"/>
+    <circle cx="168" cy="190" r="24" fill="url(#pcg)"/>
+    <path d="M122 234L168 260L214 234" stroke="url(#pcg)" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <text x="440" y="250" fill="white" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="124" font-weight="800" letter-spacing="9">PRIVCHAIN</text>
+  <text x="444" y="308" fill="#A0A0A0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="500" letter-spacing="2.2">PRIVATE PAYMENTS FOR AGENTS</text>
+</svg>
