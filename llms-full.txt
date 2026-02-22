@@ -1,0 +1,89 @@
+# PrivChain - Consolidated Public Context
+
+PrivChain is privacy infrastructure for machine-native payments, designed to integrate with x402-compatible payment semantics.
+
+## Core Positioning
+
+- PrivChain does not replace payment transport.
+- PrivChain provides the privacy and settlement layer for x402-compatible flows.
+- Public disclosures focus on integration surfaces and system intent while pre-release hardening is active.
+
+## Current Stage
+
+- Private testnet hardening is active.
+- Public docs expose interface names and system boundaries.
+- Partner integration starts at API surface and developer resources.
+- Internal proof tuning and defense thresholds remain private until release gates are complete.
+
+## Public API Surface (Interface Names Only)
+
+### Facilitator and scheme
+
+- `POST /verify`
+- `POST /settle`
+- `GET /health`
+- `GET /settlements/:settlementRef`
+- `POST /reconcile`
+- `priv-stark/v1`
+
+### Protocol service interfaces
+
+- `PrivChainProtocol`
+- `PrivacyPoolService`
+- `CommitmentService`
+- `NullifierService`
+- `ProofVerificationService`
+- `SettlementService`
+- `CompliancePolicyService`
+
+### Query interface groups
+
+- `NetworkQueryAPI`
+- `PoolQueryAPI`
+- `ProofQueryAPI`
+- `TransactionSubmissionAPI`
+- `SettlementQueryAPI`
+
+### SDK and wallet surfaces
+
+- `PrivClient`
+- `PrivFacilitatorClient`
+- `PrivWalletClient`
+- `PrivPaymentSession`
+- `PrivWallet`
+- `SignerSession`
+- `TransactionSigner`
+
+### MCP and operations surfaces
+
+- `privchain_pay`
+- `privchain_quote`
+- `privchain_balance`
+- `privchain_receipt`
+- `privchain_health`
+- `HealthAPI`
+- `ReadinessAPI`
+- `MetricsAPI`
+- `AuditEventAPI`
+
+## Stability Bands
+
+- Stable: interface names listed above.
+- Evolving: request/response payload details and policy constraints.
+- Restricted: proof internals, anti-abuse controls, and production defense thresholds.
+
+## Developer and Partner Entry Points
+
+- Homepage: https://privchain.io/
+- API page: https://privchain.io/api.html
+- Developer status: https://privchain.io/developers.html
+- Resource center: https://privchain.io/resources.html
+- Security summary: https://privchain.io/security.html
+- FAQ: https://privchain.io/faq.html
+
+## Machine-readable Markdown
+
+- https://privchain.io/ai/overview.md
+- https://privchain.io/ai/api-surface.md
+- https://privchain.io/ai/integration.md
+- https://privchain.io/ai/security-and-operations.md

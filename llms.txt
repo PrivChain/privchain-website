@@ -1,0 +1,27 @@
+# PrivChain
+> x402-compatible privacy infrastructure for agent-to-agent and agent-to-service payments.
+
+Canonical site: https://privchain.io
+Sitemap: https://privchain.io/sitemap.xml
+Robots: https://privchain.io/robots.txt
+
+## Primary Pages
+- Homepage: https://privchain.io/
+- API surface: https://privchain.io/api.html
+- Developer status: https://privchain.io/developers.html
+- Resources: https://privchain.io/resources.html
+- Security summary: https://privchain.io/security.html
+- FAQ: https://privchain.io/faq.html
+- Architecture: https://privchain.io/architecture.html
+- Mission: https://privchain.io/mission.html
+
+## Markdown Corpus (AI-friendly)
+- Overview: https://privchain.io/ai/overview.md
+- API surface: https://privchain.io/ai/api-surface.md
+- Integration guidance: https://privchain.io/ai/integration.md
+- Security and operations: https://privchain.io/ai/security-and-operations.md
+- Full consolidated context: https://privchain.io/llms-full.txt
+
+## Scope and Boundaries
+- Public content is interface-level and partner-readiness level.
+- Launch-critical internals (proof internals, anti-abuse thresholds, production runbooks) are intentionally withheld pre-release.
