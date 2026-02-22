@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PrivChain FAQ for builders and operators. Answers on x402 compatibility, wallet requirements, signer architecture, and launch readiness.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="keywords" content="PrivChain FAQ, x402, private payments, wallet, MCP, SDK">
     <meta property="og:title" content="PrivChain FAQ | Common Integration and Launch Questions">
     <meta property="og:description" content="Answers to recurring PrivChain protocol, SDK, MCP, and deployment questions.">
@@ -16,6 +17,7 @@
     <meta name="twitter:image" content="https://privchain.io/assets/brand/social-card-faq-1200x630.png">
     <meta name="theme-color" content="#0a0a0a">
     <link rel="canonical" href="https://privchain.io/faq.html">
+    <link rel="alternate" type="text/markdown" href="https://privchain.io/llms-full.txt">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -27,6 +29,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is PrivChain replacing x402?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. PrivChain uses x402-compatible payment semantics and focuses on privacy infrastructure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the core payment scheme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The intended private scheme is priv-stark/v1, aligned with x402-compatible payment payloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we need a full wallet app before launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not strictly. A secure signer workflow plus SDK and MCP flows can power agent-first usage before a full consumer wallet UI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do we handle signing securely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use remote signer architecture for production deployments with KMS/HSM-compatible backend paths."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can a client detect payment status?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use settlement lookup by reference and reconciliation operations for long-pending states."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is public pre-release?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stage status, interface-level docs, mission framing, and API surface are public. Launch-critical internals remain private until hardening and audit gates pass."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar">
