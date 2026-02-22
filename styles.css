@@ -123,7 +123,11 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 22px;
+}
+
+.nav-links > li {
+    position: relative;
 }
 
 .nav-links a {
@@ -135,6 +139,68 @@ img {
 
 .nav-links a:hover {
     color: var(--accent);
+}
+
+.nav-more {
+    position: relative;
+}
+
+.nav-more summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.nav-more summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-more summary::after {
+    content: " ▾";
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+.nav-more:hover summary,
+.nav-more[open] summary {
+    color: var(--accent);
+}
+
+.nav-more-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 210px;
+    padding: 8px;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    background: rgba(12, 12, 12, 0.96);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    z-index: 20;
+}
+
+.nav-more[open] .nav-more-menu {
+    display: block;
+}
+
+.nav-more-menu li {
+    width: 100%;
+}
+
+.nav-more-menu a {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 7px;
+}
+
+.nav-more-menu a:hover {
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .nav-cta {
@@ -1363,8 +1429,29 @@ img {
         border-left: 1px solid var(--border);
     }
 
+    .nav-links > li {
+        width: 100%;
+    }
+
     .nav-links.active {
         right: 0;
+    }
+
+    .nav-links a,
+    .nav-more summary {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .nav-more-menu {
+        position: static;
+        min-width: 100%;
+        margin-top: 8px;
+        border-radius: 8px;
+        border-color: var(--border);
+        box-shadow: none;
+        backdrop-filter: none;
     }
 
     .nav-cta {
