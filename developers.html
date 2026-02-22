@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PrivChain developer intent, staged SDK/MCP availability, and release direction for integration partners.">
+  <meta name="description" content="PrivChain developer status: active hardening stage, available integration surfaces, and release-gate expectations.">
+  <meta name="keywords" content="PrivChain developer status, SDK readiness, MCP integration, x402 privacy">
   <meta property="og:title" content="PrivChain Developer Intent">
-  <meta property="og:description" content="Staged release priorities for SDKs, MCP tooling, and reference implementations.">
+  <meta property="og:description" content="Current stage, integration surfaces, and launch-gate signals for developers and partners.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://privchain.io/developers.html">
   <meta property="og:image" content="https://privchain.io/assets/brand/social-card-developers-1200x630.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PrivChain Developer Intent">
-  <meta name="twitter:description" content="SDK, MCP, and example release intent for PrivChain ecosystem development.">
+  <meta name="twitter:description" content="SDK, MCP, and release-gate visibility for integration planning.">
   <meta name="twitter:image" content="https://privchain.io/assets/brand/social-card-developers-1200x630.png">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="canonical" href="https://privchain.io/developers.html">
@@ -22,13 +23,102 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<section class="cta-section" style="padding-top:160px;min-height:100vh;"><div class="container"><div class="cta-content"><h1 class="cta-title">Developer Availability Intent</h1><p class="cta-subtitle">PrivChain is preparing SDK and MCP tooling for staged public release after compatibility, security, and disclosure gates are approved.</p>
-<div class="feature-card" style="text-align:left;"><ul class="feature-list">
-<li>TypeScript SDK for application and agent clients</li>
-<li>Python SDK for service automation workflows</li>
-<li>MCP server tools for payment, settlement lookup, and reconciliation</li>
-<li>Reference examples for end-to-end flows</li>
-</ul></div>
-<p style="margin-top:24px;"><a class="btn btn-secondary" href="index.html">Back to Homepage</a></p></div></div></section>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="PrivChain Home">
+        <img class="logo-image" src="assets/brand/logo-mark.svg" alt="PrivChain logo">
+        <span class="logo-text">PRIVCHAIN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#stage">Stage</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="privpedia.html">Privpedia</a></li>
+        <li><a href="api.html">API</a></li>
+      </ul>
+      <a href="https://github.com/PrivChain" target="_blank" rel="noopener" class="btn btn-primary nav-cta">GitHub</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="features" style="padding-top: 160px; min-height: 100vh;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Developer Status</span>
+        <h1 class="section-title">Current Integration Reality</h1>
+        <p class="section-subtitle">PrivChain is past concept stage and in private-testnet hardening with controlled partner integrations.</p>
+      </div>
+
+      <div class="features-grid" style="margin-bottom: 24px;">
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Available Now</h3>
+          <ul class="feature-list">
+            <li>x402-aligned payment lifecycle surface</li>
+            <li>Public API naming and integration docs</li>
+            <li>SDK and MCP direction for early adopters</li>
+          </ul>
+        </div>
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Active Hardening</h3>
+          <ul class="feature-list">
+            <li>Replay and idempotency edge-case validation</li>
+            <li>Settlement-state and reconciliation reliability checks</li>
+            <li>Signer isolation and custody-path hardening</li>
+          </ul>
+        </div>
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Trade-Secret Boundary</h3>
+          <ul class="feature-list">
+            <li>Core proof internals remain non-public pre-release</li>
+            <li>Abuse defenses and thresholds remain confidential</li>
+            <li>Production runbooks disclosed progressively after gates</li>
+          </ul>
+        </div>
+        <div class="feature-card" style="opacity: 1; transform: none;">
+          <h3 class="feature-title">Launch-Gate Signals</h3>
+          <ul class="feature-list">
+            <li>Hardening cycle closure evidence</li>
+            <li>External review and remediation completion</li>
+            <li>Controlled partner expansion and broader rollout</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-buttons" style="justify-content: flex-start;">
+        <a class="btn btn-primary" href="api.html">Open API Surface</a>
+        <a class="btn btn-secondary" href="resources.html">Open Resources</a>
+        <a class="btn btn-secondary" href="index.html#roadmap">View Launch Progress</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2026 PrivChain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
