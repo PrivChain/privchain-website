@@ -51,3 +51,4 @@ Generated web icons are in `../icons/`:
 
 - PNG exports are generated from SVG sources.
 - Keep SVG files as canonical masters for future edits.
+- Social preview variants can be regenerated with `scripts/generate-social-cards.sh`.
