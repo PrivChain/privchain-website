@@ -186,5 +186,17 @@
       }
     });
   </script>
+  <script src="assets/js/analytics-config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script>
+    (function () {
+      window.privchainTrackEvent("waitlist_form_view", { signup_location: "website" });
+      const form = document.querySelector("form[data-funnel-form]");
+      if (!form) return;
+      form.addEventListener("submit", function () {
+        window.privchainTrackEvent("waitlist_form_submit", { signup_location: "website" });
+      });
+    })();
+  </script>
 </body>
 </html>

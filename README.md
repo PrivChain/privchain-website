@@ -21,6 +21,7 @@ Public website for PrivChain, preserving the legacy visual style while serving T
 - `llms.txt` + `llms-full.txt`: AI crawler discovery and consolidated context
 - `ai/*.md`: markdown mirrors for agent-friendly parsing
 - `SEO_OPERATIONS.md`: search/AI crawler submission runbook
+- `ANALYTICS_SETUP.md`: GA4 setup and conversion tracking runbook
 - `scripts/submit-search-engines.sh`: sitemap and crawler submission helper
 - `.github/workflows/pages.yml`: GitHub Pages deployment workflow
 - `CNAME`: custom domain configuration (`privchain.io`)

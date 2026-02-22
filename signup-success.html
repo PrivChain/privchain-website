@@ -90,5 +90,30 @@
       this.classList.toggle('active');
     });
   </script>
+  <script src="assets/js/analytics-config.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script>
+    (function () {
+      if (sessionStorage.getItem("pc_waitlist_signup_tracked") === "1") return;
+
+      let params = { signup_location: "website", form_provider: "formsubmit" };
+      try {
+        const raw = localStorage.getItem("privchain_funnel_v1");
+        if (raw) {
+          const state = JSON.parse(raw) || {};
+          const last = state.last_touch || {};
+          params.utm_source = last.utm_source || "";
+          params.utm_medium = last.utm_medium || "";
+          params.utm_campaign = last.utm_campaign || "";
+          params.funnel_from = last.path || "";
+        }
+      } catch (_) {
+        // Ignore attribution parsing errors.
+      }
+
+      window.privchainTrackEvent("waitlist_signup", params);
+      sessionStorage.setItem("pc_waitlist_signup_tracked", "1");
+    })();
+  </script>
 </body>
 </html>
