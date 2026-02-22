@@ -28,6 +28,12 @@ Utility value improves when:
 - settlement is reliable,
 - and token sinks are tied to executed work volume.
 
+## Plain-English examples
+
+- Car sourcing contract: buyer sets constraints (for example GBP 20,000 used BMW requirements), specialist agent searches and negotiates, human gets ranked options and closes directly.
+- Travel optimization contract: agent coordinates flights, dates, hotels, and routing tradeoffs for best price/experience mix.
+- Compute-speed contract: micro-payments to faster specialist agents can beat local compute cost/time for routine workloads.
+
 ## Primary references
 
 - https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025
