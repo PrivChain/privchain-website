@@ -18,7 +18,7 @@ Open site pages:
 - `/signup.html`
 - `/signup-success.html`
 
-Confirm events appear in GA4 Realtime.
+Accept analytics consent from the cookie banner (or footer "Cookie Settings"), then confirm events appear in GA4 Realtime.
 
 ## 3) Conversion events already instrumented
 
@@ -45,3 +45,9 @@ When ready to run ads:
 1. Link GA4 property to Google Ads
 2. Import `waitlist_signup` as Ads conversion
 3. Keep this event as primary optimization goal
+
+## 6) GDPR behavior (implemented)
+
+- Analytics scripts load only after explicit analytics consent.
+- Default state is essential-only cookies.
+- Consent can be revisited via footer "Cookie Settings".

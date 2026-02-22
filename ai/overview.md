@@ -13,6 +13,7 @@ PrivChain is privacy infrastructure for machine-native payments.
 - Private testnet hardening is active.
 - Interface names and integration boundaries are public.
 - Sensitive internals remain intentionally private until release gates are complete.
+- Optional analytics is consent-gated; default website mode is essential-only.
 
 ## Key pages
 
@@ -22,3 +23,5 @@ PrivChain is privacy infrastructure for machine-native payments.
 - Resources: https://privchain.io/resources.html
 - Security: https://privchain.io/security.html
 - Signup: https://privchain.io/signup.html
+- Privacy: https://privchain.io/privacy.html
+- Terms: https://privchain.io/terms.html
