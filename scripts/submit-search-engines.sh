@@ -43,11 +43,16 @@ if [[ -n "${INDEXNOW_KEY:-}" ]]; then
   "urlList": [
     "https://${DOMAIN}/",
     "https://${DOMAIN}/api.html",
+    "https://${DOMAIN}/architecture.html",
+    "https://${DOMAIN}/mission.html",
     "https://${DOMAIN}/resources.html",
     "https://${DOMAIN}/developers.html",
     "https://${DOMAIN}/security.html",
     "https://${DOMAIN}/faq.html",
+    "https://${DOMAIN}/privpedia.html",
     "https://${DOMAIN}/signup.html",
+    "https://${DOMAIN}/privacy.html",
+    "https://${DOMAIN}/terms.html",
     "https://${DOMAIN}/llms.txt",
     "https://${DOMAIN}/llms-full.txt"
   ]
